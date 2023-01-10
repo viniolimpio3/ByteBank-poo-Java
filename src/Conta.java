@@ -1,7 +1,13 @@
 class Conta {
-    //Construtor
-    public Conta() {
 
+    private static int totalContas;
+
+    //Construtor
+    public Conta(int agencia, int numero, Cliente titular){
+        Conta.totalContas++;
+        this.setNumero(numero);
+        this.setAgencia(agencia);
+        this.setTitular(titular);
     }
 
     private double saldo;
@@ -14,7 +20,7 @@ class Conta {
     public int getAgencia() {
         return agencia;
     }
-    public void setAgencia(int agencia) {
+    private void setAgencia(int agencia) {
         this.agencia = agencia;
     }
 
@@ -22,7 +28,7 @@ class Conta {
     public int getNumero() {
         return numero;
     }
-    public void setNumero(int numero) {
+    private void setNumero(int numero) {
         this.numero = numero;
     }
 
@@ -56,4 +62,7 @@ class Conta {
         return false;
     }
 
+    public static int getTotalContas() {
+        return Conta.totalContas;
+    }
 }

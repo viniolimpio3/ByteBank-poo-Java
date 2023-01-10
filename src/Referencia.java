@@ -1,6 +1,6 @@
 public class Referencia {
     public static void main(String[] args) {
-        Conta primeira = new Conta();
+        Conta primeira = new Conta(123, 11554, new Cliente("Vini", "16165151", "Dev"));
 
         primeira.deposita(300);
         System.out.println("Saldo primeira conta: " + primeira.getSaldo());

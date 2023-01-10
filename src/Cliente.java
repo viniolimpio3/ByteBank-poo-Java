@@ -1,4 +1,11 @@
 public class Cliente {
+
+    public Cliente(String nome, String cpf, String profissao){
+        this.setNome(nome);
+        this.setCpf(cpf);
+        this.setProfissao(profissao);
+    }
+
     private String nome;
 
     public String getNome() {

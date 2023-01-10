@@ -1,34 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        Conta contaVini = new Conta();
-        Conta contaTeste = new Conta();
+        Conta contaVini = new Conta(123, 11554, new Cliente("Vini", "16165151", "Dev"));
+        Conta contaTeste = new Conta(123, 15648, new Cliente("Teste", "3423445345", "DBA"));
 
-        Cliente vini = new Cliente();
-        Cliente teste = new Cliente();
-
-        vini.setNome("Vini");
-        vini.setCpf("12343556445");
-        vini.setProfissao("Dev");
-
-        teste.setNome("Teesttee");
-        teste.setCpf("453453453453");
-        teste.setProfissao("DBA");
-
-
-        contaVini.setTitular(vini);
         contaVini.deposita(500);
-        contaVini.setAgencia(123);
-        contaVini.setNumero(111154);
 
-
-        contaTeste.setTitular(teste);
         contaTeste.deposita(200);
-        contaTeste.setAgencia(123);
-        contaTeste.setNumero(111154);
 
         System.out.println("Nome titular: " + contaVini.getTitular().getNome());
         System.out.println("Nome titular: " + contaTeste.getTitular().getNome());
-
-        
+        System.out.println("Total contas: " + Conta.getTotalContas());
     }
 }
