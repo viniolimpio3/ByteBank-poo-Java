@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Conta contaVini = new Conta(123, 11554, new Cliente("Vini", "16165151", "Dev"));
@@ -7,8 +9,18 @@ public class Main {
 
         contaTeste.deposita(200);
 
-        System.out.println("Nome titular: " + contaVini.getTitular().getNome());
-        System.out.println("Nome titular: " + contaTeste.getTitular().getNome());
         System.out.println("Total contas: " + Conta.getTotalContas());
+
+
+        List<Conta> lista = new ArrayList<Conta>();
+
+        lista.add(contaTeste);
+        lista.add(contaVini);
+
+        // foreach example
+        for (Conta conta : lista) {
+            System.out.println("Nome Titular: " + conta.getTitular().getNome());
+        }
+
     }
 }
