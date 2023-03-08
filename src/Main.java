@@ -1,9 +1,10 @@
+import Contas.*;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Conta contaVini = new Conta(123, 11554, new Cliente("Vini", "16165151", "Dev"));
-        Conta contaTeste = new Conta(123, 15648, new Cliente("Teste", "3423445345", "DBA"));
+        Conta contaVini = new ContaCorrente(123, 11554, new Cliente("Vini", "16165151", "Dev"));
+        Conta contaTeste = new ContaPoupanca(123, 15648, new Cliente("Teste", "3423445345", "DBA"));
 
         contaVini.deposita(500);
 

@@ -1,4 +1,6 @@
-class Conta {
+package Contas;
+
+public abstract class Conta {
 
     private static int totalContas;
 
